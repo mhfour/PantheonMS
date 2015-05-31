@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Pantheon.Site" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>
+        <asp:ContentPlaceHolder ID="Title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <style>
+        body {
+            padding-top: 60px;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="Styles" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+            <div class="container">
+                <div id="navbar" class="navbar-collapse collapse">
+                    <form class="navbar-form navbar-left">
+                        <a class="navbar-brand" href="/">Delonix Regia Hotel</a>
+                    </form>
+                    <form class="navbar-form navbar-right" role="form">
+                        <a href="Default.aspx" class="btn btn-danger">Log Out</a>
+                    </form>
+                </div>
+
+                <!-- Placeholder for dynamic navbar -->
+                <div class="navbar-collapse collapse">
+                    <!-- Left navbar -->
+                    <ul class="nav navbar-nav" id="navbar_admin" runat="server" visible="false">
+                        <li><a href="/">Home</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav" id="navbar_jobseeker" runat="server" visible="false">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/job_listing">Job Listings</a></li>
+                    </ul>
+
+                    <!-- Right navbar -->
+                    <ul class="nav navbar-nav navbar-right" id="navbar_right_notloggedin" runat="server" visible="false">
+                        <li><a href="signup">Sign up</a></li>
+                        <li><a href="login">Login</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right" id="navbar_right_loggedin" runat="server" visible="false">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hey, <span id="lblUsername" runat="server" />
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" id="dropdown_admin" runat="server" visible="false">
+                                <li><a href="/jobseeker/settings">Account Settings</a></li>
+                                <li><a href="/jobseeker/change_password">Change Password</a></li>
+
+                                <li class="divider"></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                            <ul class="dropdown-menu" role="menu" id="dropdown_jobseeker" runat="server" visible="false">
+                                <li><a href="/jobseeker/settings">Account Settings</a></li>
+                                <li><a href="/jobseeker/change_password">Change Password</a></li>
+                                <li><a href="/jobseeker/profile">Profile</a></li>
+
+                                <li class="divider"></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="Content" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="Scripts" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

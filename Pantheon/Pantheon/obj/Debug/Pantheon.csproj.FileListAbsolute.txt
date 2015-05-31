@@ -1,0 +1,6 @@
+C:\Users\user\Documents\Visual Studio 2013\Projects\Pantheon\Pantheon\bin\Pantheon.dll.config
+C:\Users\user\Documents\Visual Studio 2013\Projects\Pantheon\Pantheon\bin\Pantheon.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\Pantheon\Pantheon\bin\Pantheon.pdb
+C:\Users\user\Documents\Visual Studio 2013\Projects\Pantheon\Pantheon\obj\Debug\Pantheon.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2013\Projects\Pantheon\Pantheon\obj\Debug\Pantheon.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\Pantheon\Pantheon\obj\Debug\Pantheon.pdb
