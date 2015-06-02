@@ -35,12 +35,12 @@
     <div class="row">
         <div class="col-md-12 text-center">
             <div class="list-group list-group-horizontal">
-                <a href="#" class="list-group-item">User Accounts</a>
+                <a href="UserAccounts.aspx" class="list-group-item">User Accounts</a>
                 <a href="#" class="list-group-item active">Staff List</a>
-                <a href="#" class="list-group-item">Guests' Details</a>
-                <a href="#" class="list-group-item">Booking Records</a>
-                <a href="#" class="list-group-item">Room Information</a>
-                <a href="#" class="list-group-item">Duty Roster</a>
+                <a href="GuestDetails.aspx" class="list-group-item">Guests' Details</a>
+                <a href="BookingDetails.aspx" class="list-group-item">Booking Records</a>
+                <a href="RoomStatus.aspx" class="list-group-item">Room Information</a>
+                <a href="DutyRoster.aspx" class="list-group-item">Duty Roster</a>
             </div>
         </div>
     </div>
