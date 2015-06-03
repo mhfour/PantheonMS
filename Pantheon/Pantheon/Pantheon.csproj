@@ -141,6 +141,7 @@
     <Compile Include="BookingDetails.aspx.designer.cs">
       <DependentUpon>BookingDetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Room.cs" />
     <Compile Include="ConfirmCheckout.aspx.cs">
       <DependentUpon>ConfirmCheckout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -285,6 +286,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

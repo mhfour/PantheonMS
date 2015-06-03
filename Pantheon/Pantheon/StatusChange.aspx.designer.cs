@@ -31,21 +31,21 @@ namespace Pantheon {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertFail;
         
         /// <summary>
-        /// tbxStatus control.
+        /// ddlStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText tbxStatus;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlStatus;
         
         /// <summary>
-        /// btnCreate control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnCreate;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnSubmit;
     }
 }

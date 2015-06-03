@@ -54,27 +54,10 @@
                                 <th class="text-center">Unit No.</th>
                                 <th class="text-center">Type</th>
                                 <th class="text-center">Status</th>
+                                <th class="text-center">Actions</th>
                             </tr>
                         </thead>
-                        <tbody id="categoryTable">
-                            <tr>
-                                <td class="text-center">5</td>
-                                <td class="text-center">05-32</td>
-                                <td class="text-center">Junior Suite</td>
-                                <td class="text-center"><span class="label label-danger">Occupied</span></td> 
-                            </tr>
-                            <tr>
-                                <td class="text-center">1</td>
-                                <td class="text-center">01-41</td>
-                                <td class="text-center">Double Room</td>
-                                <td class="text-center"><span class="label label-success">Vacant</span></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">3</td>
-                                <td class="text-center">03-11</td>
-                                <td class="text-center">Twin Double Room</td>
-                                <td class="text-center"><span class="label label-warning">Housekeeping</span></td>
-                            </tr>
+                        <tbody id="roomTable">
                         </tbody>
                     </table>
                 </div>
@@ -83,4 +66,25 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="Scripts" runat="server">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET", // Using HTTP GET.
+                url: "http://localhost:8000/api/room",
+                dataType: "json",
+                success: function (data) {
+                    for (var i in data) {
+                        $('#roomTable').append('<tr>'
+													+ '<td>' + data[i].roomlvl + '</td>'
+													+ '<td>' + data[i].roomunit + '</td>'
+                                                    + '<td>' + data[i].roomtype + '</td>'
+                                                    + '<td>' + data[i].roomstatus + '</td>'
+                                                    + '<td class="text-center"><a href="StatusChange.aspx?id=' + data[i].roomid + '" class="btn btn-warning">Edit</a></td> '
+													+ '</tr>'
+												);
+                    }
+                }
+            });
+        });
+    </script>
 </asp:Content>

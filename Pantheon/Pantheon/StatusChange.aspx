@@ -26,36 +26,22 @@
                                 </div>
                             </div>
                             <div class="col-md-9">
-                                <h3>Room Unit: 01-41</h3>
                                 <div class="row">
                                     <div role="form">
-                                        <div class="form-group">
-                                            <label for="tbxCategoryID">Current Room Status</label>
-                                            <input type="text" class="form-control" id="tbxStatus" placeholder="Vacant" runat="server">
-                                        </div>
                                         <div class="control-group">
-                                            <label class="control-label" for="updatedStatus">New Room Status</label>
-                                            <div class="controls col-md-12">
-                                                <label class="radio" for="updatedStatus-0">
-                                                    <input type="radio" name="updatedStatus" id="updatedStatus-0" value="Vacant" checked="checked">
-                                                    Vacant
-                                                </label>
-                                                <label class="radio" for="updatedStatus-1">
-                                                    <input type="radio" name="updatedStatus" id="updatedStatus-1" value="Occupied">
-                                                    Occupied
-                                                </label>
-                                                <label class="radio" for="updatedStatus-2">
-                                                    <input type="radio" name="updatedStatus" id="updatedStatus-2" value="Housekeeping">
-                                                    Housekeeping
-                                                </label>
-                                            </div>
+                                            <label class="control-label" for="updatedStatus">New Room Status:</label>
+                                            <select class="form-control" name="ddlStatus" id="ddlStatus" runat="server">
+                                                <option value="1" selected>Vacant</option>
+                                                <option value="2">Occupied</option>
+                                                <option value="3">Vacant and Scheduled for Cleaning</option>
+                                            </select>
                                         </div>
-                                        <button type="submit" class="btn btn-primary" id="btnCreate" runat="server">Submit</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <button type="submit" class="btn btn-primary pull-right" id="btnSubmit" runat="server">Submit</button>
                 </div>
             </div>
         </div>

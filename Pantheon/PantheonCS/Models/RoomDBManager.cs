@@ -30,7 +30,7 @@ namespace PantheonCS.Models
                     r.roomlvl = (int)dr["room_level"];
                     r.roomunit = (String)dr["room_unit"];
                     r.roomtype = (String)dr["room_type"];
-                    r.roomstatus = (String)dr["room_status"];
+                    r.roomstatus= (String)dr["room_status"];
                     result.Add(r);
                 }
                 dr.Close();
@@ -86,7 +86,7 @@ namespace PantheonCS.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "UPDATE dbo.Room SET roomlvl=@room_level, roomunit=@room_unit, roomtype=@room_type, roomstatus=@room_status  where roomid=@room_id";
+                comm.CommandText = "UPDATE dbo.Room SET roomlvl=@room_level, roomunit=@room_unit, roomtype=@room_type, roomstatus=@room_status WHERE roomid=@room_id";
                 comm.Parameters.AddWithValue("@room_level", item.roomlvl);
                 comm.Parameters.AddWithValue("@room_unit", item.roomunit);
                 comm.Parameters.AddWithValue("@room_type", item.roomtype);
