@@ -3,26 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace PantheonCS.Models
+namespace Pantheon.Classes
 {
     public class Booking
     {
-        public int bookingid
-        {
-            get;
-            set;
-        }
-        public String guestname
-        {
-            get;
-            set;
-        }
-        public String roomunit
+        public int guestname
         {
             get;
             set;
         }
         public String roomtype
+        {
+            get;
+            set;
+        }
+        public String roomunit
         {
             get;
             set;
@@ -42,10 +37,10 @@ namespace PantheonCS.Models
             get;
             set;
         }
-        public DateTime checkoutdatetime
+        public DateTime checkoutdate
         {
             get;
             set;
-        } 
+        }
     }
 }

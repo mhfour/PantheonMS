@@ -141,6 +141,7 @@
     <Compile Include="BookingDetails.aspx.designer.cs">
       <DependentUpon>BookingDetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Booking.cs" />
     <Compile Include="Classes\Room.cs" />
     <Compile Include="ConfirmCheckout.aspx.cs">
       <DependentUpon>ConfirmCheckout.aspx</DependentUpon>
