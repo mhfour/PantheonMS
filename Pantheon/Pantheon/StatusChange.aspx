@@ -31,9 +31,9 @@
                                         <div class="control-group">
                                             <label class="control-label" for="updatedStatus">New Room Status:</label>
                                             <select class="form-control" name="ddlStatus" id="ddlStatus" runat="server">
-                                                <option value="1" selected>Vacant</option>
-                                                <option value="2">Occupied</option>
-                                                <option value="3">Vacant and Scheduled for Cleaning</option>
+                                                <option value="Vacant" selected>Vacant</option>
+                                                <option value="Occupied">Occupied</option>
+                                                <option value="Vacant and Scheduled for Cleaning">Vacant and Scheduled for Cleaning</option>
                                             </select>
                                         </div>
                                     </div>

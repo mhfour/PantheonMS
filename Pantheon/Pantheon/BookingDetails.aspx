@@ -64,8 +64,7 @@
                                 <th class="text-center">No. of Adults</th>
                                 <th class="text-center">No. of Children</th>
                                 <th class="text-center">Check-in Date & Time</th>
-                                <th class="text-center">Check-out Date</th>
-                                <th class="text-center">Requested Check-out Time</th>
+                                <th class="text-center">Check-out Date & Time</th>
                                 <th class="text-center">Actions</th>
                             </tr>
                         </thead>

@@ -7,6 +7,10 @@ using System.Net.Http.Headers;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Data.Sql;
+using System.Configuration;
+using System.Data;
 
 namespace Pantheon
 {
@@ -35,7 +39,6 @@ namespace Pantheon
             int roomid = Int32.Parse(Request.QueryString["id"].ToString());
 
             r.roomid = roomid;
-            r.roomstatus = ddlStatus.Value;
 
             HttpResponseMessage response = client.PutAsJsonAsync("api/room?id=" + r.roomid, r).Result;
 

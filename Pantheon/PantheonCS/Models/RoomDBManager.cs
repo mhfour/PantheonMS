@@ -86,10 +86,7 @@ namespace PantheonCS.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "UPDATE dbo.Room SET roomlvl=@room_level, roomunit=@room_unit, roomtype=@room_type, roomstatus=@room_status WHERE roomid=@room_id";
-                comm.Parameters.AddWithValue("@room_level", item.roomlvl);
-                comm.Parameters.AddWithValue("@room_unit", item.roomunit);
-                comm.Parameters.AddWithValue("@room_type", item.roomtype);
+                comm.CommandText = "UPDATE dbo.Room SET roomstatus=@room_status WHERE roomid=@room_id";
                 comm.Parameters.AddWithValue("@room_status", item.roomstatus);
                 rowsupdated = comm.ExecuteNonQuery();
                 conn.Close();
