@@ -37,7 +37,22 @@
                                             <input type="text" class="form-control" id="tbxRoomType" placeholder="" runat="server">
                                         </div>
                                     </div>
-                                    
+                                    <div class="form-group">
+                                        <p><strong>Check-out Date:</strong></p>
+                                        <asp:Calendar ID="Calendar1" runat="server" Width="300px" Height="300px"></asp:Calendar>
+                                    </div>
+                                    <p><strong>Check-out Time:</strong></p>
+                                    <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control">
+                                        <asp:ListItem Value="7:00">7:00</asp:ListItem>
+                                        <asp:ListItem>8:00</asp:ListItem>
+                                        <asp:ListItem>9:00</asp:ListItem>
+                                        <asp:ListItem>10:00</asp:ListItem>
+                                        <asp:ListItem>11:00</asp:ListItem>
+                                        <asp:ListItem>12:00</asp:ListItem>
+                                        <asp:ListItem>13:00</asp:ListItem>
+                                        <asp:ListItem>14:00</asp:ListItem>
+                                        <asp:ListItem>15:00</asp:ListItem>
+                                    </asp:DropDownList>
                                 </div>
                             </div>
                         </div>

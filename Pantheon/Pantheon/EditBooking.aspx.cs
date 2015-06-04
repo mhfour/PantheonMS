@@ -46,32 +46,31 @@ namespace Pantheon
         {
             HttpClient client = new HttpClient();
 
-			client.BaseAddress = new Uri("http://localhost:8000/"); // Our API URL. 
+            client.BaseAddress = new Uri("http://localhost:8000/"); // Our API URL. 
 
-			// Add an Accept header for JSON format. 
-			client.DefaultRequestHeaders.Accept.Add(
-				new MediaTypeWithQualityHeaderValue("application/json"));
+            // Add an Accept header for JSON format. 
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
 
-			var b = new Booking();
+            var b = new Booking();
 
-			int bookingId = Int32.Parse(Request.QueryString["id"].ToString());
+            int bookingId = Int32.Parse(Request.QueryString["id"].ToString());
 
-			b.bookingid = bookingId;
-			b.roomunit= tbxRoomUnit.Value;
+            b.bookingid = bookingId;
+            b.roomunit = tbxRoomUnit.Value;
             b.roomtype = tbxRoomType.Value;
 
-			HttpResponseMessage response = client.PutAsJsonAsync("api/booking?id=" + b.bookingid, b).Result;
+            HttpResponseMessage response = client.PutAsJsonAsync("api/booking?id=" + b.bookingid, b).Result;
 
-			if (response.IsSuccessStatusCode)
-			{
-				Session["success"] = true;
-				Response.Redirect("~/Admin/BookingDetails.aspx");
-			}
-			else
-			{
-				alertFail.Visible = true;
-			}
-		}
+            if (response.IsSuccessStatusCode)
+            {
+                Session["success"] = true;
+                Response.Redirect("~/Admin/BookingDetails.aspx");
+            }
+            else
+            {
+                alertFail.Visible = true;
+            }
         }
     }
 }

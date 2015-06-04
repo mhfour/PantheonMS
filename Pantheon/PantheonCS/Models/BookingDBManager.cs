@@ -123,14 +123,9 @@ namespace PantheonCS.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "UPDATE dbo.Booking SET guest_name=@guest_name, room_unit=@room_unit, room_type=@room_type, no_of_adults=@no_of_adults, no_of_children=@no_of_children, check_in_datetime=@check_in_datetime, check_out_datetime=@check_out_datetime where bookingid=@booking_id";
-                comm.Parameters.AddWithValue("@booking_id", bk.bookingid);
-                comm.Parameters.AddWithValue("@guest_name", bk.guestname);
+                comm.CommandText = "UPDATE dbo.Booking SET room_unit=@room_unit, room_type=@room_type, check_out_datetime=@check_out_datetime where bookingid=@booking_id";
                 comm.Parameters.AddWithValue("@room_unit", bk.roomunit);
                 comm.Parameters.AddWithValue("@room_type", bk.roomtype);
-                comm.Parameters.AddWithValue("@no_of_adults", bk.noofadults);
-                comm.Parameters.AddWithValue("@no_of_children", bk.noofchildren);
-                comm.Parameters.AddWithValue("@check_in_datetime", bk.checkindatetime);
                 comm.Parameters.AddWithValue("@check_out_datetime", bk.checkoutdatetime);
                 rowsupdated = comm.ExecuteNonQuery();
                 conn.Close();

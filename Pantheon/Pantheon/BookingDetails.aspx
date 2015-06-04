@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="col-md-12 column">
-                <a href="/Admin/AddBooking.aspx" class="btn btn-default pull-right">Add new booking details</a>
+                <a href="AddBooking.aspx" class="btn btn-default pull-right">Add new booking details</a>
             </div>
         </div>
     </div>
