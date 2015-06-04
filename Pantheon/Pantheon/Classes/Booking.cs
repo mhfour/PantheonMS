@@ -7,17 +7,22 @@ namespace Pantheon.Classes
 {
     public class Booking
     {
-        public int guestname
+        public int bookingid
         {
             get;
             set;
         }
-        public String roomtype
+        public String guestname
         {
             get;
             set;
         }
         public String roomunit
+        {
+            get;
+            set;
+        }
+        public String roomtype
         {
             get;
             set;

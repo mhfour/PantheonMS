@@ -31,57 +31,30 @@ namespace Pantheon {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertFail;
         
         /// <summary>
-        /// tbxCategory control.
+        /// tbxRoomUnit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText tbxCategory;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText tbxRoomUnit;
         
         /// <summary>
-        /// Text1 control.
+        /// tbxRoomType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText tbxRoomType;
         
         /// <summary>
-        /// Text2 control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text2;
-        
-        /// <summary>
-        /// Text10 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text10;
-        
-        /// <summary>
-        /// Text11 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text11;
-        
-        /// <summary>
-        /// btnCreate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnCreate;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnSubmit;
     }
 }

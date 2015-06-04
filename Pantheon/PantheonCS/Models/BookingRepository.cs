@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using PantheonCS.Models;
 
 namespace PantheonCS.Models
 {
-    public class BookingRepository : IRoomRepository
+    public class BookingRepository : IBookingRepository
     {
         public BookingRepository()
         {

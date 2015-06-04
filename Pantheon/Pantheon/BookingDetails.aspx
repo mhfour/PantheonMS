@@ -59,8 +59,8 @@
                             <tr>
                                 <th class="text-center">#</th>
                                 <th class="text-center">Guest Name</th>
-                                <th class="text-center">Room Type</th>
                                 <th class="text-center">Room Unit</th>
+                                <th class="text-center">Room Type</th>
                                 <th class="text-center">No. of Adults</th>
                                 <th class="text-center">No. of Children</th>
                                 <th class="text-center">Check-in Date & Time</th>
@@ -68,28 +68,41 @@
                                 <th class="text-center">Actions</th>
                             </tr>
                         </thead>
-                        <tbody id="categoryTable">
-                            <tr>
-                                <td>1</td>
-                                <td>Ander Herrera</td>
-                                <td>Junior Suite</td>
-                                <td>05-32</td>
-                                <td>2</td>
-                                <td>1</td>
-                                <td>5 May 2016 @ 2.30pm</td>
-                                <td>9 May 2016</td>
-                                <td>2pm</td>
-                                <td class="text-center"><a href="EditCategory.aspx?id=" class="btn btn-warning">Edit</a> <a href="DeleteCategory.aspx?id=" class="btn btn-primary">Checkout</a>
-                            </tr>
+                        <tbody id="bookingTable">
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="col-md-12 column">
-                <a href="/Admin/AddCategory.aspx" class="btn btn-default pull-right">Add new booking details</a>
+                <a href="/Admin/AddBooking.aspx" class="btn btn-default pull-right">Add new booking details</a>
             </div>
         </div>
     </div>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="Scripts" runat="server">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET", // Using HTTP GET.
+                url: "http://localhost:8000/api/booking",
+                dataType: "json",
+                success: function (data) {
+                    for (var i in data) {
+                        $('#bookingTable').append('<tr>'
+                                                    + '<td>' + data[i].bookingid + '</td>'
+													+ '<td>' + data[i].guestname + '</td>'
+													+ '<td>' + data[i].roomunit + '</td>'
+                                                    + '<td>' + data[i].roomtype + '</td>'
+                                                    + '<td>' + data[i].noofadults + '</td>'
+                                                    + '<td>' + data[i].noofchildren + '</td>'
+                                                    + '<td>' + data[i].checkindatetime + '</td>'
+                                                    + '<td>' + data[i].checkoutdatetime + '</td>'
+                                                    + '<td class="text-center"><a href="EditBooking.aspx?id=' + data[i].bookingid + '" class="btn btn-warning">Edit</a></td> '
+													+ '</tr>'
+												);
+                    }
+                }
+            });
+        });
+    </script>
 </asp:Content>

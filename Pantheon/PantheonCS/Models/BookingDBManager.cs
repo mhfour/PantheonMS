@@ -56,7 +56,7 @@ namespace PantheonCS.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "SELECT * FROM dbo.Booking WHERE bookingid=@booking_id";
+                comm.CommandText = "SELECT * FROM dbo.Booking WHERE booking_id=@booking_id";
                 comm.Parameters.AddWithValue("@booking_id", id);
                 SqlDataReader dr = comm.ExecuteReader();
                 if (dr.Read())
@@ -92,7 +92,7 @@ namespace PantheonCS.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "INSERT INTO Booking(guestname, roomunit, roomtype, noofadults, noofchildren, checkindatetime, checkoutdatetime)" +
+                comm.CommandText = "INSERT INTO Booking(guest_name, room_unit, room_type, no_of_adults, no_of_children, check_in_datetime, check_out_datetime)" +
                     " VALUES (@guest_name, @room_unit, @room_type , @no_of_adults, @no_of_children, @check_in_datetime, @check_out_datetime)";
 
                 comm.Parameters.AddWithValue("@guest_name", b.guestname);
@@ -123,7 +123,7 @@ namespace PantheonCS.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "UPDATE dbo.Booking SET guestname=@guest_name, roomunit=@room_unit, roomtype=@room_type, noofadults=@no_of_adults, noofchildren=@no_of_children, checkindatetime=@check_in_datetime, checkoutdatetime, @check_out_datetime where bookingid=@booking_id";
+                comm.CommandText = "UPDATE dbo.Booking SET guest_name=@guest_name, room_unit=@room_unit, room_type=@room_type, no_of_adults=@no_of_adults, no_of_children=@no_of_children, check_in_datetime=@check_in_datetime, check_out_datetime=@check_out_datetime where bookingid=@booking_id";
                 comm.Parameters.AddWithValue("@booking_id", bk.bookingid);
                 comm.Parameters.AddWithValue("@guest_name", bk.guestname);
                 comm.Parameters.AddWithValue("@room_unit", bk.roomunit);
