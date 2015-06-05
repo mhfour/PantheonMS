@@ -31,57 +31,75 @@ namespace Pantheon {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertFail;
         
         /// <summary>
-        /// tbxCategory control.
+        /// tbxGuestName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText tbxCategory;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText tbxGuestName;
         
         /// <summary>
-        /// Text1 control.
+        /// tbxRoomType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText tbxRoomType;
         
         /// <summary>
-        /// Text2 control.
+        /// tbxRoomUnit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText tbxRoomUnit;
         
         /// <summary>
-        /// Text10 control.
+        /// tbxAdults control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text10;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText tbxAdults;
         
         /// <summary>
-        /// Text11 control.
+        /// tbxChildren control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text11;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText tbxChildren;
         
         /// <summary>
-        /// btnCreate control.
+        /// tbxCheckInDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnCreate;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText tbxCheckInDate;
+        
+        /// <summary>
+        /// tbxCheckOutDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText tbxCheckOutDate;
+        
+        /// <summary>
+        /// btnSubmit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnSubmit;
     }
 }

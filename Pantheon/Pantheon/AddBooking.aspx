@@ -4,6 +4,7 @@
     Add Booking Details | Delonix Regia
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Styles" runat="server">
+    <link href="Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Content" runat="server">
     <div class="container">
@@ -29,53 +30,46 @@
                                 <div class="row">
                                     <div role="form">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="tbxCategory" placeholder="Guest Name" runat="server">
+                                            <input type="text" class="form-control" id="tbxGuestName" placeholder="Guest Name" runat="server">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="Text1" placeholder="Room Type" runat="server">
+                                            <input type="text" class="form-control" id="tbxRoomType" placeholder="Room Type" runat="server">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="Text2" placeholder="Room Unit No." runat="server">
+                                            <input type="text" class="form-control" id="tbxRoomUnit" placeholder="Room Unit No." runat="server">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="Text10" placeholder="No. of Adults" runat="server">
+                                            <input type="text" class="form-control" id="tbxAdults" placeholder="No. of Adults" runat="server">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="Text11" placeholder="No. of Children" runat="server">
+                                            <input type="text" class="form-control" id="tbxChildren" placeholder="No. of Children" runat="server">
                                         </div>
                                         <div class='col-sm-6'>
                                             <div class="form-group">
                                                 <label for="tbxCategoryID">Check-in Date & Time</label>
                                                 <div class='input-group date' id='datetimepicker1'>
-                                                    <input type='text' class="form-control" />
+                                                    <input type='text' class="form-control"  id="tbxCheckInDate" runat="server" />
                                                     <span class="input-group-addon">
                                                         <span class="glyphicon glyphicon-calendar"></span>
                                                     </span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <script type="text/javascript">
-                                            $(function () {
-                                                $('#datetimepicker1').datetimepicker();
-                                            });
-                                        </script>
+
+                                        <div class='col-sm-6'>
+                                            <div class="form-group">
+                                                <label for="tbxCategoryID">Check-out Date & Time</label>
+                                                <div class='input-group date' id='datetimepicker2'>
+                                                    <input type='text' class="form-control" id="tbxCheckOutDate" runat="server" />
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="tbxCategoryID">Check-out Date</label>
-                                    <div class="input-group input-append date" id="dateRangePicker">
-                                        <input type="text" class="form-control" name="date" />
-                                        <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
-                                    </div>
-                                </div>
-                                <div class="input-group clockpicker">
-                                    <label for="tbxCategoryID">Requested Check-out Time</label>
-                                    <input type="text" class="form-control">
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-time"></span>
-                                    </span>
-                                </div>
-                                <button type="submit" class="btn btn-primary" id="btnCreate" runat="server">Submit</button>
+                                <button type="submit" class="btn btn-primary" id="btnSubmit" runat="server">Submit</button>
                                 <br />
                             </div>
                         </div>
@@ -86,4 +80,25 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="Scripts" runat="server">
+    <script src="Scripts/moment.min.js"></script>
+    <script src="Scripts/bootstrap-datetimepicker.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).on('ready', function () {
+            $('#datetimepicker1').datetimepicker({
+                format: 'DD/MM/YYYY HH:mm'
+            });
+
+            $('#datetimepicker2').datetimepicker({
+                format: 'DD/MM/YYYY HH:mm'
+            });
+
+            $("#datetimepicker1").on("dp.change", function (e) {
+                $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
+            });
+            $("#datetimepicker2").on("dp.change", function (e) {
+                $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
+            });
+        });
+    </script>
 </asp:Content>

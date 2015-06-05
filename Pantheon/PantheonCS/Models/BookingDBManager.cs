@@ -88,7 +88,7 @@ namespace PantheonCS.Models
             try
             {
                 conn = new SqlConnection();
-                conn.ConnectionString = ConfigurationManager.ConnectionStrings["Pantheon"].ConnectionString;
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["PantheonDB"].ConnectionString;
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;

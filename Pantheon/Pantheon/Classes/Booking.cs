@@ -42,7 +42,7 @@ namespace Pantheon.Classes
             get;
             set;
         }
-        public DateTime checkoutdate
+        public DateTime checkoutdatetime
         {
             get;
             set;
