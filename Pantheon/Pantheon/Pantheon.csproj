@@ -84,10 +84,17 @@
     <Content Include="Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="AddStaff.aspx" />
+    <Content Include="JsEditDS.aspx" />
+    <Content Include="DutyRoster.aspx" />
+    <Content Include="JsDeleteStaff.aspx" />
+    <Content Include="JsEditStaff.aspx" />
+    <Content Include="JsAddStaff.aspx" />
+    <Content Include="JsStaffList.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\stylish-portfolio.css" />
-    <Content Include="DutyRoster.aspx" />
+    <Content Include="JsDutySchedule.aspx" />
     <Content Include="EditBooking.aspx" />
     <Content Include="EditGuest.aspx" />
     <Content Include="EditStaff.aspx" />
@@ -162,12 +169,61 @@
     <Compile Include="ConfirmCheckout.aspx.designer.cs">
       <DependentUpon>ConfirmCheckout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AddStaff.aspx.cs">
+      <DependentUpon>AddStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddStaff.aspx.designer.cs">
+      <DependentUpon>AddStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsEditDS.aspx.cs">
+      <DependentUpon>JsEditDS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsEditDS.aspx.designer.cs">
+      <DependentUpon>JsEditDS.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DutyRoster.aspx.cs">
       <DependentUpon>DutyRoster.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DutyRoster.aspx.designer.cs">
       <DependentUpon>DutyRoster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsDeleteStaff.aspx.cs">
+      <DependentUpon>JsDeleteStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsDeleteStaff.aspx.designer.cs">
+      <DependentUpon>JsDeleteStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsEditStaff.aspx.cs">
+      <DependentUpon>JsEditStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsEditStaff.aspx.designer.cs">
+      <DependentUpon>JsEditStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsAddStaff.aspx.cs">
+      <DependentUpon>JsAddStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsAddStaff.aspx.designer.cs">
+      <DependentUpon>JsAddStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsStaffList.aspx.cs">
+      <DependentUpon>JsStaffList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsStaffList.aspx.designer.cs">
+      <DependentUpon>JsStaffList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsDutySchedule.aspx.cs">
+      <DependentUpon>JsDutySchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsDutySchedule.aspx.designer.cs">
+      <DependentUpon>JsDutySchedule.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditBooking.aspx.cs">
       <DependentUpon>EditBooking.aspx</DependentUpon>

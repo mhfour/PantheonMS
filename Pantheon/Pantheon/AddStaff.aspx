@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StaffDetails.aspx.cs" Inherits="Pantheon.StaffDetails" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddStaff.aspx.cs" Inherits="Pantheon.StaffDetails" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
     Staff List | Pantheon Management System
@@ -40,14 +40,9 @@
                 <a href="GuestDetails.aspx" class="list-group-item">Guests' Details</a>
                 <a href="BookingDetails.aspx" class="list-group-item">Booking Records</a>
                 <a href="RoomStatus.aspx" class="list-group-item">Room Information</a>
-                <a href="DutyRoster.aspx" class="list-group-item">Duty Roster<
+                <a href="DutyRoster.aspx" class="list-group-item">Duty Roster</a>
             </div>
         </div>
-		<span id="lblUsername" runat="server" />
-                        <strong>
-		<asp:Button ID="AddStaffbutton" runat="server" OnClick="Button1_Click" Text="Add" />
-		</strong>
-                        </span>
     </div>
     <div class="container">
         <div class="row">
@@ -62,7 +57,7 @@
                     <table class="table table-bordered table-hover" id="tab_logic">
                         <thead>
                             <tr>
-                                <th class="text-center">#">#</th>
+                                <th class="text-center">#</th>
                                 <th class="text-center">Staff Name</th>
                                 <th class="text-center">IC No.</th>
                                 <th class="text-center">DOB</th>
