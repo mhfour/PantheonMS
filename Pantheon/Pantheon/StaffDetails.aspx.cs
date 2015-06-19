@@ -14,8 +14,13 @@ namespace Pantheon
 
 		//}
 
-		protected void Button1_Click(object sender, EventArgs e) {
-			Server.Transfer("AddUser.aspx", true);
-		}
+		//protected void Button1_Click(object sender, EventArgs e) {
+		//	Server.Transfer("AddStaff.aspx", true);
+		//}
+
+		//protected void Button2_Click(object sender, EventArgs e) {
+
+		//}
+
     }
 }

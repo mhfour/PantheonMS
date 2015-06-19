@@ -10,7 +10,7 @@
 namespace Pantheon {
     
     
-    public partial class AddUser {
+    public partial class JsAddStaff {
         
         /// <summary>
         /// alertSuccess control.
