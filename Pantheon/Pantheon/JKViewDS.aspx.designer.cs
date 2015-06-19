@@ -10,7 +10,7 @@
 namespace Pantheon {
     
     
-    public partial class JKViewStaff {
+    public partial class JKViewDS {
         
         /// <summary>
         /// form1 control.
@@ -22,13 +22,13 @@ namespace Pantheon {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ImageStaff control.
+        /// ImageDS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImageStaff;
+        protected global::System.Web.UI.WebControls.Image ImageDS;
         
         /// <summary>
         /// ButtonGuest control.
@@ -49,13 +49,13 @@ namespace Pantheon {
         protected global::System.Web.UI.WebControls.Button ButtonBookingSchedule;
         
         /// <summary>
-        /// ImageStaff2 control.
+        /// ImageDS2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImageStaff2;
+        protected global::System.Web.UI.WebControls.Image ImageDS2;
         
         /// <summary>
         /// ButtonDS control.
@@ -76,40 +76,13 @@ namespace Pantheon {
         protected global::System.Web.UI.WebControls.Button ButtonStaff;
         
         /// <summary>
-        /// ImageStaff3 control.
+        /// ImageDS3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImageStaff3;
-        
-        /// <summary>
-        /// ButtonAdd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonAdd;
-        
-        /// <summary>
-        /// ButtonEdit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonEdit;
-        
-        /// <summary>
-        /// ButtonDelete control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonDelete;
+        protected global::System.Web.UI.WebControls.Image ImageDS3;
         
         /// <summary>
         /// GridViewStaff control.

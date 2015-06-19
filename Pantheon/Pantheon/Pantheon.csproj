@@ -89,6 +89,10 @@
     <Content Include="img\SLAD-Shangrila.jpg" />
     <Content Include="img\swirly-hi.png" />
     <Content Include="img\underline.gif" />
+    <Content Include="JKAddStaff.aspx" />
+    <Content Include="JKDeleteStaff.aspx" />
+    <Content Include="JKUpdateStaff.aspx" />
+    <Content Include="JKViewDS.aspx" />
     <Content Include="JKViewStaff.aspx" />
     <Content Include="DutyRoster.aspx" />
     <Content Include="css\bootstrap.css" />
@@ -174,6 +178,34 @@
     </Compile>
     <Compile Include="AddStaff.aspx.designer.cs">
       <DependentUpon>AddStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JKAddStaff.aspx.cs">
+      <DependentUpon>JKAddStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JKAddStaff.aspx.designer.cs">
+      <DependentUpon>JKAddStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JKDeleteStaff.aspx.cs">
+      <DependentUpon>JKDeleteStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JKDeleteStaff.aspx.designer.cs">
+      <DependentUpon>JKDeleteStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JKUpdateStaff.aspx.cs">
+      <DependentUpon>JKUpdateStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JKUpdateStaff.aspx.designer.cs">
+      <DependentUpon>JKUpdateStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JKViewDS.aspx.cs">
+      <DependentUpon>JKViewDS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JKViewDS.aspx.designer.cs">
+      <DependentUpon>JKViewDS.aspx</DependentUpon>
     </Compile>
     <Compile Include="JKViewStaff.aspx.cs">
       <DependentUpon>JKViewStaff.aspx</DependentUpon>
