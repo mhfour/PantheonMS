@@ -13,22 +13,28 @@ namespace Pantheon {
 		}
 
 		protected void ButtonDelete_Click(object sender, EventArgs e) {
+			
 			string nric = TextBox1.Text;
-			string first_name = TextBox2.Text;
-			string last_name = TextBox3.Text;
-			string date_of_birth = TextBox4.Text;
-			string address = TextBox5.Text;
-			string postal_code = TextBox6.Text;
-			string contact_no = TextBox7.Text;
-			string email = TextBox8.Text;
-			string bank = TextBox9.Text;
-			string bank_no = TextBox10.Text;
-			int duty_id = Convert.ToInt32(TextBox11.Text);
-			string password = TextBox12.Text;
 			SqlConnection con = new SqlConnection();
 			con.ConnectionString = "Server=.\\SQLExpress;Database=PantheonDB;Trusted_Connection=True;Integrated Security=SSPI;";
 
-			SqlDataAdapter ada = new SqlDataAdapter("DELETE FROM dbo.Staff WHERE staff_id = @staff_id", con);
+			string query = "DELETE FROM dbo.Staff WHERE nric = @nric";
+
+			using (SqlCommand command = new SqlCommand(query, con)) {
+				//a shorter syntax to adding parameters
+				command.Parameters.AddWithValue("@nric", nric);
+
+				//make sure you open and close(after executing) the connection
+				try {
+					con.Open();
+					command.ExecuteNonQuery();
+					con.Close();
+					Response.Redirect("JKViewStaff.aspx", false);
+				} catch (Exception ex) {
+					this.Session["There is no such NRIC in our database. Please try another NRIC."] = ex.Message;
+					Response.Redirect("ErrorDisplay.aspx");
+				}
+			}
 		}
 	}
 }

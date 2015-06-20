@@ -28,8 +28,38 @@ namespace Pantheon {
 			SqlConnection con = new SqlConnection();
 			con.ConnectionString = "Server=.\\SQLExpress;Database=PantheonDB;Trusted_Connection=True;Integrated Security=SSPI;";
 
-			SqlDataAdapter ada = new SqlDataAdapter("INSERT INTO dbo.Staff (nric,first_name,last_name,date_of_birth,address,postal_code,contact_no,email,bank,bank_no,duty_id,password) VALUES (" + nric + ", " + first_name + ", " + last_name + ", " + date_of_birth + ", " + address + " , " + postal_code + " , " + contact_no + " , " + email + " , " + bank + " , " + bank_no + " , " + duty_id + " , " + password + ")", con);
+			//SqlDataAdapter ada = new SqlDataAdapter("INSERT INTO dbo.Staff (nric,first_name,last_name,date_of_birth,address,postal_code,contact_no,email,bank,bank_no,duty_id,password) VALUES (" + nric + ", " + first_name + ", " + last_name + ", " + date_of_birth + ", " + address + " , " + postal_code + " , " + contact_no + " , " + email + " , " + bank + " , " + bank_no + " , " + duty_id + " , " + password + ")", con);
+			String query = "INSERT INTO dbo.Staff (nric,first_name,last_name,date_of_birth,address,postal_code,contact_no,email,bank,bank_no,duty_id,password)" +
+				"VALUES (@nric, @first_name, @last_name, @date_of_birth, @address, @postal_code, @contact_no, @email, " +
+				"@bank, @bank_no, @duty_id, @password)";
+			using (SqlCommand command = new SqlCommand(query, con)) {
+				//a shorter syntax to adding parameters
+				command.Parameters.AddWithValue("@nric", nric);
+				command.Parameters.AddWithValue("@first_name", first_name);
+				command.Parameters.AddWithValue("@last_name", last_name);
+				command.Parameters.AddWithValue("@date_of_birth", date_of_birth);
+				command.Parameters.AddWithValue("@address", address);
+				command.Parameters.AddWithValue("@postal_code", postal_code);
+				command.Parameters.AddWithValue("@contact_no", contact_no);
+				command.Parameters.AddWithValue("@email", email);
+				command.Parameters.AddWithValue("@bank", bank);
+				command.Parameters.AddWithValue("@bank_no", bank_no);
+				command.Parameters.AddWithValue("@duty_id", duty_id);
+				command.Parameters.AddWithValue("@password", password);
 
+				//make sure you open and close(after executing) the connection
+				try {
+					con.Open();
+					command.ExecuteNonQuery();
+					con.Close();
+					Response.Redirect("JKViewStaff.aspx", false);
+
+				} catch (Exception ex) {
+					this.Session["Opps."] = ex.Message;
+					Response.Redirect("ErrorDisplay.aspx");
+
+				}
+			}
 		}
 	}
 }
