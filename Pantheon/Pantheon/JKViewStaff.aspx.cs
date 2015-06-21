@@ -58,7 +58,7 @@ namespace Pantheon {
 		}
 
 		protected void ButtonEdit_Click(object sender, EventArgs e) {
-			Response.Redirect("JKEditStaff.aspx", true);
+			Response.Redirect("JKUpdateStaff.aspx", true);
 		}
 
 

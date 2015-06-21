@@ -20,7 +20,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<asp:Label ID="Label2" runat="server" Font-Names="Calibri Light" ForeColor="#333399" Text="Enter NRIC "></asp:Label>
 &nbsp;&nbsp;&nbsp;
-		<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+		<asp:TextBox ID="TextBox1" runat="server" Font-Names="Calibri Light" ForeColor="#333399"></asp:TextBox>
 		<br />
 		<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -29,7 +29,7 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<asp:Button ID="ButtonDelete" runat="server" BackColor="White" BorderStyle="None" Font-Names="Calibri Light" Font-Underline="True" ForeColor="#333399" OnClick="ButtonDelete_Click" Text="Yes" />
+		<asp:Button ID="ButtonDelete" runat="server" BackColor="White" BorderStyle="Solid" Font-Names="Calibri Light" Font-Underline="True" ForeColor="#333399" OnClick="ButtonDelete_Click" Text="Yes" BorderColor="#333399" />
 		<br />
 		<br />
 		<br />

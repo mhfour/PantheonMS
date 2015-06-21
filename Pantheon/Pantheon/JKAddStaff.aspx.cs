@@ -55,7 +55,7 @@ namespace Pantheon {
 					Response.Redirect("JKViewStaff.aspx", false);
 
 				} catch (Exception ex) {
-					this.Session["Opps."] = ex.Message;
+					this.Session["Sorry, we are unable to add this Staff."] = ex.Message;
 					Response.Redirect("ErrorDisplay.aspx");
 
 				}
