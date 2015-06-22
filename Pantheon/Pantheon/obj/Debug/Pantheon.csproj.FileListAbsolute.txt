@@ -19,8 +19,6 @@ C:\Users\user\Documents\GitHub\PantheonMS\Pantheon\Pantheon\bin\Newtonsoft.Json.
 C:\Users\user\Documents\GitHub\PantheonMS\Pantheon\Pantheon\bin\System.Net.Http.Formatting.xml
 C:\Users\user\Documents\GitHub\PantheonMS\Pantheon\Pantheon\bin\System.Web.Http.xml
 C:\Users\user\Documents\GitHub\PantheonMS\Pantheon\Pantheon\bin\System.Web.Http.Cors.xml
-C:\Users\dell\Documents\GitHub\PantheonMS\Pantheon\Pantheon\obj\Debug\Pantheon.dll
-C:\Users\dell\Documents\GitHub\PantheonMS\Pantheon\Pantheon\obj\Debug\Pantheon.pdb
 C:\Users\dell\Documents\GitHub\PantheonMS\Pantheon\Pantheon\bin\Pantheon.dll
 C:\Users\dell\Documents\GitHub\PantheonMS\Pantheon\Pantheon\bin\Pantheon.pdb
 C:\Users\dell\Documents\GitHub\PantheonMS\Pantheon\Pantheon\bin\Newtonsoft.Json.dll
@@ -32,4 +30,5 @@ C:\Users\dell\Documents\GitHub\PantheonMS\Pantheon\Pantheon\bin\Newtonsoft.Json.
 C:\Users\dell\Documents\GitHub\PantheonMS\Pantheon\Pantheon\bin\System.Net.Http.Formatting.xml
 C:\Users\dell\Documents\GitHub\PantheonMS\Pantheon\Pantheon\bin\System.Web.Http.xml
 C:\Users\dell\Documents\GitHub\PantheonMS\Pantheon\Pantheon\bin\System.Web.Http.Cors.xml
-C:\Users\dell\Documents\GitHub\PantheonMS\Pantheon\Pantheon\obj\Debug\Pantheon.csprojResolveAssemblyReference.cache
+C:\Users\dell\Documents\GitHub\PantheonMS\Pantheon\Pantheon\obj\Debug\Pantheon.dll
+C:\Users\dell\Documents\GitHub\PantheonMS\Pantheon\Pantheon\obj\Debug\Pantheon.pdb

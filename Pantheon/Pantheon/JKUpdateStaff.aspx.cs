@@ -14,18 +14,18 @@ namespace Pantheon {
 		}
 
 		protected void ButtonUpdate_Click(object sender, EventArgs e) {
-			string nric = TextBox1.Text;
-			string first_name = TextBox2.Text;
-			string last_name = TextBox3.Text;
-			string date_of_birth = TextBox4.Text;
-			string address = TextBox5.Text;
-			string postal_code = TextBox6.Text;
-			string contact_no = TextBox7.Text;
-			string email = TextBox8.Text;
-			string bank = TextBox9.Text;
-			string bank_no = TextBox10.Text;
-			int duty_id = Convert.ToInt32(TextBox11.Text);
-			string password = TextBox12.Text;
+			string nric = TextBoxNRIC.Text;
+			string first_name = TextBoxFirstName.Text;
+			string last_name = TextBoxLastName.Text;
+			string date_of_birth = TextBoxDoB.Text;
+			string address = TextBoxAddress.Text;
+			string postal_code = TextBoxPostal.Text;
+			string contact_no = TextBoxContactNo.Text;
+			string email = TextBoxEmail.Text;
+			string bank = TextBoxBank.Text;
+			string bank_no = TextBoxBankNo.Text;
+			int duty_id = Convert.ToInt32(TextBoxDutyID.Text);
+			string password = TextBoxPassword.Text;
 
 			SqlConnection con = new SqlConnection();
 			con.ConnectionString = "Server=.\\SQLExpress;Database=PantheonDB;Trusted_Connection=True;Integrated Security=SSPI;";
@@ -57,34 +57,35 @@ namespace Pantheon {
 					Response.Redirect("JKViewStaff.aspx", false);
 				} catch (Exception ex) {
 					this.Session["There is no such NRIC in our database. Please try another NRIC."] = ex.Message;
-					Response.Redirect("ErrorDisplay.aspx");
+					//Response.Redirect("ErrorDisplay.aspx");
 				}
 			}
 		}
 
-		protected void TextBox3_TextChanged(object sender, EventArgs e) {
+		protected void ButtonLoadData_Click(object sender, EventArgs e) {
 			SqlConnection con = new SqlConnection();
 			con.ConnectionString = "Server=.\\SQLExpress;Database=PantheonDB;Trusted_Connection=True;Integrated Security=SSPI;";
 
-			SqlDataAdapter ada = new SqlDataAdapter("SELECT * FROM Staff WHERE nric="+TextBox3.Text+";", con);
+			SqlDataAdapter ada = new SqlDataAdapter("SELECT first_name, last_name, date_of_birth, address, postal_code, contact_no, email, bank, bank_no, duty_id, password FROM Staff WHERE nric= '" + TextBoxNRIC.Text + "';", con);
 
 			//Create a new table
 			DataTable dt = new DataTable();
 			//Add data to the table
 			ada.Fill(dt);
 			DataRow dr = dt.Rows[0];
-			TextBox1.Text = dr["nric"].ToString();
-			TextBox2.Text = dr["first_name"].ToString();
-			TextBox3.Text = dr["last_name"].ToString();
-			TextBox4.Text = dr["date_of_birth"].ToString();
-			TextBox5.Text = dr["address"].ToString();
-			TextBox6.Text = dr["postal_code"].ToString();
-			TextBox7.Text = dr["contact_no"].ToString();
-			TextBox8.Text = dr["email"].ToString();
-			TextBox9.Text = dr["bank"].ToString();
-			TextBox10.Text = dr["bank_no"].ToString();
-			TextBox11.Text = dr["duty_id"].ToString();
-			TextBox12.Text = dr["password"].ToString();	
+			//TextBoxNRIC.Text = dr["nric"].ToString();
+			TextBoxFirstName.Text = dr["first_name"].ToString();
+			TextBoxLastName.Text = dr["last_name"].ToString();
+			TextBoxDoB.Text = dr["date_of_birth"].ToString();
+			TextBoxAddress.Text = dr["address"].ToString();
+			TextBoxPostal.Text = dr["postal_code"].ToString();
+			TextBoxContactNo.Text = dr["contact_no"].ToString();
+			TextBoxEmail.Text = dr["email"].ToString();
+			TextBoxBank.Text = dr["bank"].ToString();
+			TextBoxBankNo.Text = dr["bank_no"].ToString();
+			TextBoxDutyID.Text = dr["duty_id"].ToString();
+			TextBoxPassword.Text = dr["password"].ToString();	
+
 
 		}
 	}
