@@ -84,10 +84,20 @@
     <Content Include="Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="AddStaff.aspx" />
+    <Content Include="img\DR.png" />
+    <Content Include="img\SLAD-Shangrila.jpg" />
+    <Content Include="img\swirly-hi.png" />
+    <Content Include="img\underline.gif" />
+    <Content Include="JKAddStaff.aspx" />
+    <Content Include="JKDeleteStaff.aspx" />
+    <Content Include="JKUpdateStaff.aspx" />
+    <Content Include="JKViewDS.aspx" />
+    <Content Include="JKViewStaff.aspx" />
+    <Content Include="DutyRoster.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\stylish-portfolio.css" />
-    <Content Include="DutyRoster.aspx" />
     <Content Include="EditBooking.aspx" />
     <Content Include="EditGuest.aspx" />
     <Content Include="EditStaff.aspx" />
@@ -161,6 +171,48 @@
     </Compile>
     <Compile Include="ConfirmCheckout.aspx.designer.cs">
       <DependentUpon>ConfirmCheckout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddStaff.aspx.cs">
+      <DependentUpon>AddStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddStaff.aspx.designer.cs">
+      <DependentUpon>AddStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JKAddStaff.aspx.cs">
+      <DependentUpon>JKAddStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JKAddStaff.aspx.designer.cs">
+      <DependentUpon>JKAddStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JKDeleteStaff.aspx.cs">
+      <DependentUpon>JKDeleteStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JKDeleteStaff.aspx.designer.cs">
+      <DependentUpon>JKDeleteStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JKUpdateStaff.aspx.cs">
+      <DependentUpon>JKUpdateStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JKUpdateStaff.aspx.designer.cs">
+      <DependentUpon>JKUpdateStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JKViewDS.aspx.cs">
+      <DependentUpon>JKViewDS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JKViewDS.aspx.designer.cs">
+      <DependentUpon>JKViewDS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JKViewStaff.aspx.cs">
+      <DependentUpon>JKViewStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JKViewStaff.aspx.designer.cs">
+      <DependentUpon>JKViewStaff.aspx</DependentUpon>
     </Compile>
     <Compile Include="DutyRoster.aspx.cs">
       <DependentUpon>DutyRoster.aspx</DependentUpon>

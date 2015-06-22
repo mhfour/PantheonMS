@@ -8,44 +8,33 @@ namespace PantheonCS.Models
 {
     public class BookingRepository : IBookingRepository
     {
-        public BookingRepository()
-        {
+        public BookingRepository() {
         }
-        public IEnumerable<Booking> GetAll()
-        {
+
+        public IEnumerable<Booking> GetAll() {
             return BookingDBManager.GetAllBookings().Cast<Booking>();
         }
-        public Booking GetById(int id)
-        {
+
+        public Booking GetById(int id) {
             return BookingDBManager.GetBookingById(id);
         }
-        public Booking AddBooking(Booking item)
-        {
-            if (item == null)
-            {
+
+        public Booking AddBooking(Booking item) {
+            if (item == null) {
                 throw new ArgumentNullException("item");
-            }
-            if (BookingDBManager.AddBooking(item) == 0)
-            {
+            } if (BookingDBManager.AddBooking(item) == 0) {
                 return null;
-            }
-            else
-            {
-                return item;
-            }
-        }
-        public bool Update(Booking item)
-        {
-            if (item == null)
-            {
+				} else {
+					return item;
+			}
+		}
+
+        public bool Update(Booking item) {
+            if (item == null) {
                 throw new ArgumentNullException("item");
-            }
-            if (BookingDBManager.Update(item) == 0)
-            {
+            } if (BookingDBManager.Update(item) == 0) {
                 return false;
-            }
-            else
-            {
+            } else {
                 return true;
             }
         }
